@@ -4,14 +4,14 @@ import cv2 as cv
 # Read an image with cv.imread()
 my_cat = cv.imread('images/my_cat.jpg')
 
-# # Display image as a new window with cv.imshow(). 
-# # It requires the name of the window and the image (matrix of pixels)
-# cv.imshow('My Cat', my_cat)
-# print(my_cat.shape)
+# Display image as a new window with cv.imshow(). 
+# It requires the name of the window and the image (matrix of pixels)
+cv.imshow('My Cat', my_cat)
+print(my_cat.shape)
 
 
-# # cv.waitKey() is a Keyboard binding function that waits for a specific delay in milliseconds for a key to be pressed
-# cv.waitKey(0)
+# cv.waitKey() is a Keyboard binding function that waits for a specific delay in milliseconds for a key to be pressed
+cv.waitKey(0)
 
 # #-------------
 
@@ -48,14 +48,14 @@ my_cat = cv.imread('images/my_cat.jpg')
 
 # Rescaling implies modifying hight and width. It is best practice to downscale (smaller than original). 
 
-def rescaleFrame(frame, scale=0.5):
-    width = int(frame.shape[1]*scale)
-    height = int(frame.shape[0]*scale)
-    dimensions = (width, height)
+# def rescaleFrame(frame, scale=0.5):
+#     width = int(frame.shape[1]*scale)
+#     height = int(frame.shape[0]*scale)
+#     dimensions = (width, height)
 
-    return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
+#     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
 
-my_cat = rescaleFrame(my_cat, 0.15)
+# my_cat = rescaleFrame(my_cat, 0.15)
 # cv.imshow('My Cat', my_cat)
 
 
@@ -81,7 +81,7 @@ my_cat = rescaleFrame(my_cat, 0.15)
 
 # # Draw
 
-import numpy as np
+# import numpy as np
 
 # blank = np.zeros((500, 500, 3), dtype='uint8' )
 # cv.imshow('Blank', blank)
@@ -155,11 +155,11 @@ import numpy as np
 # cv.imshow('My Cat Eroded', my_cat_eroded)
 
 # Cropping
-print(my_cat.shape)
-# cv.rectangle(my_cat, (200, 280), (500, 750), (0,0,255), thickness=2)
-# cv.imshow('My Cat Rectangle', my_cat)
-my_cat = my_cat[280:750, 200:500]
-cv.imshow('My Cat', my_cat)
+# print(my_cat.shape)
+# # cv.rectangle(my_cat, (200, 280), (500, 750), (0,0,255), thickness=2)
+# # cv.imshow('My Cat Rectangle', my_cat)
+# my_cat = my_cat[280:750, 200:500]
+# cv.imshow('My Cat', my_cat)
 
 
 # Transformations
